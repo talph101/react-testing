@@ -28,6 +28,7 @@ function App() {
 
       <button onClick={toggleHidden}>
         {showHidden ? 'Hide' : 'Show'} hidden content
+        
       </button>
 
       {showHidden && (
