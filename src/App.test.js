@@ -26,7 +26,16 @@ test('Button should render', () => {
  */
 test('theme button should update button text', () => {
   // TODO: change the expect to actually test something 😉
-  expect('no test written').toBe('tested');
+  render(<App />);
+
+  const buttonThere = screen.getByRole('button', { name: /Current theme: light/i });
+  
+
+  fireEvent.click(themeButton);
+
+  const updatedButton = screen.getByRole('button', { name: /Current theme: dark/i });
+
+  expect(updatedButton).toBeInTheDocument();
 });
 
 // BONUS
